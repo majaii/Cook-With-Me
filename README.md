@@ -23,22 +23,31 @@
 
 ## Prerequisites
 
-- Node.js and npm installed on your system
+- Node.js (v18.x or later recommended) installed on your system
+- npm (or yarn if your prefer it)
+- modern web browser (e.g., Chrome, Safari, Firefox)
 
 ## Instalation Steps
 
 1. Clone the repository:
-   git clone https://github.com/yourusername/cook-with-me-recipe-generator.git
+   git clone https://github.com/majaii/Cook-With-Me.git
 
-2. Navigate int the project directory:
+2. Navigate into the project directory:
    cd cook-with-me-recipe-generator
 
 3. Install dependencies:
-   npm install
 
-4. Start the development server:
-   npm start
+   - using npm: npm install
+   - using yarn: yarn install
 
-5. If it doesn't open automatically, open your browser and visit http://localhost:3000
-# Cook-With-Me
-# Cook-With-Me
+4. Set up Enviroment Variables:
+
+   - create a .env file in the root of the project and add the following line:
+     REACT_APP_API_KEY='bc68f14bb2ff4f6cae885ce96305d618'
+
+5. Start the development server:
+
+   - using npm: npm start
+     -using yarn: yarn start
+
+6. If it doesn't open automatically, open your browser and visit http://localhost:3000
