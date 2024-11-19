@@ -1,0 +1,277 @@
+/* General styles for the document */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9e7d7;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Custom heading styles */
+.custom-heading {
+    color: #8a4b08;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* Custom button styles */
+.custom-button {
+    background-color: #8a4b08;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #552b08;
+}
+
+/* Remove button styling */
+.remove-button {
+    margin-left: 10px; 
+    background-color: #8a4b08; 
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 12px; 
+}
+
+.remove-button:hover {
+    background-color: #552b08; 
+}
+
+
+/* Recipe list container styles */
+.recipe-list {
+    background-color: #e3bc9a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-list li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+/* Container for main content */
+.container {
+   padding: 20px;
+   flex-grow: 1;
+}
+
+/* Flexbox container for layout */
+.recipe-generator-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #e3bc9a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 0 0 250px;
+    margin-top: 180px;
+    margin-right: 20px;
+}
+
+.sidebar h3, .sidebar h4 {
+    color: #8a4b08;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    cursor: pointer;
+    color: #c57117;
+    font-weight: bold;
+}
+
+.sidebar li:hover {
+    color: #552b08;
+}
+
+/* Main content styles */
+.main-content {
+    flex-grow: 1;
+}
+
+/* Recipe card styles */
+.recipe-card {
+    background-color: #f8f1e4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+    transform: scale(1.02);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+/* Recipe title styling */
+.recipe-title {
+    color: #8a4b08;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+
+/* Recipe detail container styling */
+.recipe-detail-container {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+/* "Cook With Me" home link styling */
+.home-link {
+    text-decoration: none;
+    top: 20px;
+    left: 20px;
+}
+
+.home-box {
+    background-color: #f8f1e4;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.home-box:hover {
+    background-color: #552b08;
+}
+
+/* Page title styling */
+.page-title {
+    margin: 0;
+    color: #c57117;
+    padding: 0;
+    font-size: 24px;
+}
+
+/* Recipe image container and image styling */
+.recipe-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.recipe-image-large {
+    width: 300px;
+    height: auto;
+    border: 3px solid #8a4b08;
+    border-radius: 8px;
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+/* Box styles for recipe details */
+.recipe-box {
+    background-color: #f8f1e4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon styles for serving size and cooking time */
+.serving-time-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    color: #8b4513;
+}
+
+.serving-time-info div {
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.serving-time-info i {
+    margin-right: 8px;
+    color: #8b4513;
+    font-size: 1.2em;
+}
+
+/* Icon for the cooking utensil on the homepage */
+.cooking-icon {
+    position: absolute;
+    top: 80px;
+    left: 170px;
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #8b4513;
+}
