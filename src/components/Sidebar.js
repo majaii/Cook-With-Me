@@ -3,7 +3,7 @@ import React from 'react';
 // Sidebar component that displays recipe categories
 function Sidebar({ onSelectCategory }) {
     // Array of diet types (e.g., gluten-free, vegetarian) and meal types (e.g., breakfast, dessert)
-    const categories = ['Gluten-Free', 'Vegetarian', 'Vegan', 'Pescetarian', 'Ketogenic']; // Diet types
+    const categories = ['Gluten-Free', 'Vegetarian', 'Vegan', 'Pescatarian', 'Ketogenic']; // Diet types
     const courses = ['Main-Course', 'Breakfast', 'Side-Dish', 'Dessert', 'Salad']; // Meal types
 
     return (
