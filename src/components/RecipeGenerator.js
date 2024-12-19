@@ -35,6 +35,15 @@ function RecipeGenerator() {
 
     // Fetches recipes based on the entered ingredients
     const handleSearchClick = async () => {
+        // Check if ingredients are added to the list
+        if (ingredientsList.length === 0) {
+            alert('Please add at least one ingredient.'); // Display an alert if no ingredients are added
+            return; // Stop the function
+        }
+
+        // Clear the existing recipes before fetching new ones
+        setRecipes([]);
+
         const query = ingredientsList.join(', '); // Combine all ingredients into a single query string
         const apiKey = 'bc68f14bb2ff4f6cae885ce96305d618'; // Spoonacular API key
 
@@ -52,15 +61,26 @@ function RecipeGenerator() {
                     apiKey: apiKey
                 },
             });
-            // Process response to extract necessary details (title, image, id)
-            const recipesWithImages = response.data.map(recipe => ({
-                id: recipe.id,
-                title: recipe.title,
-                image: recipe.image
-            }));
-            setRecipes(recipesWithImages); // Update state with fetched recipes
+
+            if (response.data.length === 0) {
+                // No recipes found
+                alert('No recipes found for given ingredients. Please try different ingredients');
+                setRecipes([]); // Ensure recipe list is cleared
+            } else {
+                // Process response to extract necessary details (title, image, id)
+                const recipesWithImages = response.data.map(recipe => ({
+                    id: recipe.id,
+                    title: recipe.title,
+                    image: recipe.image
+                }));
+                setRecipes(recipesWithImages); // Update state with fetched recipes
+            }
+
         } catch (error) {
             console.error('Error fetching recipes:', error); // Log errors
+            // Handle invalid API key or network errors
+            alert('Unable to fetch recipes. Please check your API key or try again later.');
+            setRecipes([]); // Clear existing recipes to avoid confusion
         }
     };
 
